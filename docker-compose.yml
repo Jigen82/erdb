@@ -1,8 +1,6 @@
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/realbestia1/erdb:latest
     restart: unless-stopped
     environment:
       NODE_ENV: production
