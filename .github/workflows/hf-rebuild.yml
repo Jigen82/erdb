@@ -2,7 +2,7 @@ name: Hugging Face Nightly Factory Rebuild
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # ogni giorno alle 03:00
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Factory Rebuild su HF Space
+      - name: Trigger Factory Rebuild
         run: |
           curl -X POST \
             -H "Authorization: Bearer ${{ secrets.HF_TOKEN }}" \
-            "https://huggingface.co/api/spaces/frankuaku/bder_rat/restart?factory=true"
+            "https://huggingface.co/api/spaces/Jigen82/erdb/restart?factory=true"
